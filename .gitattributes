@@ -8,3 +8,5 @@ android/**/*.gradle linguist-vendored
 android/**/*.kt linguist-vendored
 **/*.rb linguist-vendored
 **/*.swift linguist-vendored
+Podfile linguist-detectable=false
+Gemfile linguist-detectable=false
