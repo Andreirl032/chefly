@@ -1,9 +1,9 @@
-#Force the Linguist to recognize Js/Ts/Tsx
-*.js linguist-language=JavaScript
+#Force the Linguist to recognize Ts/Tsx
 *.ts linguist-language=TypeScript
 *.tsx linguist-language=TypeScript
 
 #Ignoring (in the language percentage calculation) files that are not part of the core app logic
+*.js linguist-vendored
 android/**/*.gradle linguist-vendored
 android/**/*.kt linguist-vendored
 **/*.rb linguist-vendored
