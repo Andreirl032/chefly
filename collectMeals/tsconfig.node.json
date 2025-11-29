@@ -1,0 +1,15 @@
+//Warning: development configuration made for the one execution of the official meal database population
+
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "types": ["node"],
+    "resolveJsonModule": true,
+    "outDir": "dist"
+  },
+  "include": ["collectMeals.ts", "interfaces.ts"]
+}

@@ -1,7 +1,7 @@
-import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import AppStack from "./AppStack";
-import AuthStack from "./AuthStack";
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import AppStack from './AppStack';
+import AuthStack from './AuthStack';
 
 export default function RootNavigator() {
   const user = true; //Future firebase state
