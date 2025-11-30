@@ -6,14 +6,15 @@ import FavoritesScreen from '../screens/App/FavoritesScreen';
 import OfflineScreen from '../screens/App/OfflineSavedScreen';
 import ProfileScreen from '../screens/App/ProfileScreen';
 import SettingsScreen from '../screens/App/SettingsScreen';
-// import MaterialIcons from '@react-native-vector-icons/material-icons';
+import MaterialIcons from '@react-native-vector-icons/material-icons';
+
 
 const Drawer = createDrawerNavigator();
 
-// const createIcon =
-//   (name: any) =>
-//   ({ color, size }: { color: string; size: number }) =>
-//     <MaterialIcons name={name} size={size} color={color} />;
+const createIcon =
+  (name: any) =>
+  ({ color, size }: { color: string; size: number }) =>
+    <MaterialIcons name={name} size={size} color={color} />;
 
 export default function DrawerNavigator() {
   return (
@@ -32,7 +33,7 @@ export default function DrawerNavigator() {
         component={FeedScreen}
         options={{
           title: 'Feed',
-          // drawerIcon: createIcon("restaurant-menu"),
+          drawerIcon: createIcon("restaurant-menu"),
         }}
       />
 
@@ -41,7 +42,7 @@ export default function DrawerNavigator() {
         component={FavoritesScreen}
         options={{
           title: 'Favoritos',
-          // drawerIcon: createIcon("favorite"),
+          drawerIcon: createIcon("favorite"),
         }}
       />
 
@@ -50,7 +51,7 @@ export default function DrawerNavigator() {
         component={OfflineScreen}
         options={{
           title: 'Offline',
-          // drawerIcon: createIcon("vloud-off"),
+          drawerIcon: createIcon("cloud-off"),
         }}
       />
 
@@ -59,7 +60,7 @@ export default function DrawerNavigator() {
         component={ProfileScreen}
         options={{
           title: 'Perfil',
-          // drawerIcon: createIcon("person"),
+          drawerIcon: createIcon("person"),
         }}
       />
 
@@ -68,7 +69,7 @@ export default function DrawerNavigator() {
         component={SettingsScreen}
         options={{
           title: 'Configurações',
-          // drawerIcon: createIcon("settings"),
+          drawerIcon: createIcon("settings"),
         }}
       />
     </Drawer.Navigator>

@@ -102,10 +102,7 @@ const FeedScreen = () => {
     <SafeAreaView style={styles.container} edges={['left', 'right','bottom']}>
       <FlatList
         data={meals}
-        renderItem={i => {
-          console.log(i.item);
-          return renderMeal(i);
-        }}
+        renderItem={renderMeal}
         keyExtractor={item => item.id}
         onEndReached={loadMeals}
         onEndReachedThreshold={0.5}
