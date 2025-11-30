@@ -10,7 +10,13 @@ const Stack = createNativeStackNavigator();
 
 export default function AppStack() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: { backgroundColor: '#FF7A00' },
+        headerTintColor: '#fff',
+        headerTitleStyle: { fontWeight: 'bold' },
+      }}
+    >
       <Stack.Screen name="Feed" component={FeedScreen} />
       <Stack.Screen name="Recipe" component={RecipeDetailsScreen} />
       <Stack.Screen name="Favorites" component={FavoritesScreen} />

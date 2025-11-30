@@ -13,10 +13,11 @@ import {
   getDocs,
   getFirestore,
   limit,
-  orderBy,
+  // orderBy,
   query,
   startAfter,
 } from '@react-native-firebase/firestore';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 interface MealCardData {
   id: string;
@@ -49,7 +50,7 @@ const FeedScreen = () => {
 
     let q = query(
       collection(firestoreDb, 'officialMeals'),
-      orderBy('name'),
+      // orderBy('name'),
       limit(PAGE_SIZE),
     );
 
@@ -65,10 +66,6 @@ const FeedScreen = () => {
       return;
     }
 
-    // const newMeals = snapshot.docs.map(doc => ({
-    //   id: doc.id,
-    //   ...doc.data(),
-    // })) as MealCardData[];
     const newMeals: MealCardData[] = snapshot.docs.map((doc: any) => {
       const data = doc.data();
       return {
@@ -101,9 +98,8 @@ const FeedScreen = () => {
     </TouchableOpacity>
   );
 
-  console.log;
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['left', 'right','bottom']}>
       <FlatList
         data={meals}
         renderItem={i => {
@@ -117,7 +113,7 @@ const FeedScreen = () => {
           loading ? <ActivityIndicator size="large" /> : null
         }
       />
-    </View>
+    </SafeAreaView>
   );
 };
 
