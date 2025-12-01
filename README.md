@@ -88,7 +88,7 @@ yarn ios
 
 - Create a project in Firebase Console
 - Enable Email/Password and Google Sign-In
-- Download \`google-services.json\` and place it in \`android/app/\`
+- Download `google-services.json` and place it in `android/app/`
 
 ### Step 4: Release APK Build (Android)
 
