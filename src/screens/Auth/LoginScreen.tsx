@@ -13,6 +13,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useNavigation } from '@react-navigation/native';
 import { AuthStackParamList } from '../../types/Navigation';
 import { loginWithGoogle } from '../../services/auth';
+import { StatusBar } from 'react-native';
 
 type NavProps = NativeStackNavigationProp<AuthStackParamList, 'Login'>;
 
@@ -68,6 +69,7 @@ export default function LoginScreen() {
       <TouchableOpacity onPress={() => navigation.navigate('CreateAccount')}>
         <Text style={styles.link}>Create an account</Text>
       </TouchableOpacity>
+      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
     </SafeAreaView>
   );
 }
