@@ -7,7 +7,7 @@ import OfflineScreen from '../screens/App/OfflineSavedScreen';
 import ProfileScreen from '../screens/App/ProfileScreen';
 import SettingsScreen from '../screens/App/SettingsScreen';
 import MaterialIcons from '@react-native-vector-icons/material-icons';
-
+import { CustomDrawerContent } from '../components/DrawerContent';
 
 const Drawer = createDrawerNavigator();
 
@@ -27,13 +27,14 @@ export default function DrawerNavigator() {
         headerTintColor: '#fff',
         headerTitleStyle: { fontWeight: 'bold' },
       }}
+      drawerContent={CustomDrawerContent}
     >
       <Drawer.Screen
         name="Home"
         component={FeedScreen}
         options={{
           title: 'Feed',
-          drawerIcon: createIcon("restaurant-menu"),
+          drawerIcon: createIcon('restaurant-menu'),
         }}
       />
 
@@ -42,7 +43,7 @@ export default function DrawerNavigator() {
         component={FavoritesScreen}
         options={{
           title: 'Favorites',
-          drawerIcon: createIcon("favorite"),
+          drawerIcon: createIcon('favorite'),
         }}
       />
 
@@ -51,7 +52,7 @@ export default function DrawerNavigator() {
         component={OfflineScreen}
         options={{
           title: 'Offline',
-          drawerIcon: createIcon("cloud-off"),
+          drawerIcon: createIcon('cloud-off'),
         }}
       />
 
@@ -60,7 +61,7 @@ export default function DrawerNavigator() {
         component={ProfileScreen}
         options={{
           title: 'Profile',
-          drawerIcon: createIcon("person"),
+          drawerIcon: createIcon('person'),
         }}
       />
 
@@ -69,7 +70,7 @@ export default function DrawerNavigator() {
         component={SettingsScreen}
         options={{
           title: 'Settings',
-          drawerIcon: createIcon("settings"),
+          drawerIcon: createIcon('settings'),
         }}
       />
     </Drawer.Navigator>
