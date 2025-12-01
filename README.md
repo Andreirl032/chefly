@@ -105,4 +105,4 @@ The APK will be located at:
 android/app/build/outputs/apk/release/app-release.apk
 ```
 
-> Note: This APK is not signed. To publish on Google Play, you need to create a keystore and configure it in \`build.gradle\`.
+> Note: This APK is not signed. To publish on Google Play, you need to create a keystore and configure it in `build.gradle`.
