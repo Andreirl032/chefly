@@ -68,7 +68,7 @@ export default function DrawerNavigator() {
         name="Settings"
         component={SettingsScreen}
         options={{
-          title: 'Configurações',
+          title: 'Settings',
           drawerIcon: createIcon("settings"),
         }}
       />
