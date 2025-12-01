@@ -41,7 +41,7 @@ export default function DrawerNavigator() {
         name="Favorites"
         component={FavoritesScreen}
         options={{
-          title: 'Favoritos',
+          title: 'Favorites',
           drawerIcon: createIcon("favorite"),
         }}
       />
@@ -59,7 +59,7 @@ export default function DrawerNavigator() {
         name="Profile"
         component={ProfileScreen}
         options={{
-          title: 'Perfil',
+          title: 'Profile',
           drawerIcon: createIcon("person"),
         }}
       />

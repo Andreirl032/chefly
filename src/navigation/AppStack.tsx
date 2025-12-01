@@ -6,8 +6,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // import OfflineSavedScreen from '../screens/App/OfflineSavedScreen.tsx';
 // import ProfileScreen from '../screens/App/ProfileScreen.tsx';
 import DrawerNavigator from './DrawerNavigator.tsx';
+import RecipeDetailsScreen from '../screens/App/RecipeDetailsScreen.tsx';
+import { RootStackParamList } from '../types/Navigation.ts';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function AppStack() {
   return (
@@ -25,6 +27,7 @@ export default function AppStack() {
       <Stack.Screen name="Offline Saved" component={OfflineSavedScreen} />
       <Stack.Screen name="Profile" component={ProfileScreen} /> */}
       <Stack.Screen name="AppDrawer" component={DrawerNavigator} />
+      <Stack.Screen name="RecipeDetails" component={RecipeDetailsScreen} />
     </Stack.Navigator>
   );
 }

@@ -18,24 +18,23 @@ import {
   startAfter,
 } from '@react-native-firebase/firestore';
 import { SafeAreaView } from 'react-native-safe-area-context';
-
-interface MealCardData {
-  id: string;
-  name: string;
-  category: string;
-  area: string;
-  thumbnail: string;
-}
+import { useNavigation } from '@react-navigation/native';
+import { Recipe } from '../../types/Recipe';
+import { RootStackParamList } from '../../types/Navigation';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 const PAGE_SIZE = 10;
+type FeedNav = NativeStackNavigationProp<RootStackParamList, 'AppDrawer'>;
 
 const FeedScreen = () => {
   const firestoreDb = getFirestore();
 
-  const [meals, setMeals] = useState<MealCardData[]>([]);
+  const [meals, setMeals] = useState<Recipe[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [lastDoc, setLastDoc] = useState<any>(null);
   const [noMoreData, setNoMoreData] = useState(false);
+
+  const navigation = useNavigation<FeedNav>();
 
   // useEffect(() => {
   //   // só pega a instância depois que o app já está montado
@@ -66,14 +65,18 @@ const FeedScreen = () => {
       return;
     }
 
-    const newMeals: MealCardData[] = snapshot.docs.map((doc: any) => {
+    const newMeals: Recipe[] = snapshot.docs.map((doc: any) => {
       const data = doc.data();
       return {
-        id: data.id,
+        id: data.id ?? doc.id,
         name: data.name,
-        category: data.category,
         area: data.area,
+        category: data.category,
+        instructions: data.instructions,
         thumbnail: data.thumbnail,
+        youtube: data.youtube,
+        tags: data.tags ?? [],
+        ingredients: data.ingredients ?? [],
       };
     });
 
@@ -86,8 +89,12 @@ const FeedScreen = () => {
     loadMeals();
   }, [loadMeals]);
 
-  const renderMeal = ({ item }: { item: MealCardData }) => (
-    <TouchableOpacity style={styles.card}>
+  const renderMeal = ({ item }: { item: Recipe }) => (
+    <TouchableOpacity
+      style={styles.card}
+      // key={item.idMeal}
+      onPress={() => navigation.navigate('RecipeDetails', { recipe: item })}
+    >
       <Image source={{ uri: item.thumbnail }} style={styles.thumbnail} />
       <View style={styles.info}>
         <Text style={styles.name}>{item.name}</Text>
@@ -99,7 +106,7 @@ const FeedScreen = () => {
   );
 
   return (
-    <SafeAreaView style={styles.container} edges={['left', 'right','bottom']}>
+    <SafeAreaView style={styles.container} edges={['left', 'right', 'bottom']}>
       <FlatList
         data={meals}
         renderItem={renderMeal}
