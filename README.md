@@ -1,4 +1,3 @@
-
 # Chefly - Meal & Recipe App
 
 <!-- ![App Logo](./assets/logo.png) -->
@@ -20,17 +19,27 @@ Chefly is a mobile application that allows users to track their meals, view reci
 
 ---
 
-## Screens
+### Screens
 
-| Screen | Description |
-|--------|------------|
-| **Login** | Login screen with email/password and Google Sign-In button | ![Login](./assets/screenshots/login.jpg) |
-| **Create Account** | Screen to create an account with password confirmation | ![Create Account](./assets/screenshots/create_account.jpg) |
-| **Home / Dashboard** | Main screen showing meal summary and recipes | ![Home](./assets/screenshots/home.jpg) |
-| **Recipe Details** | Details of a selected recipe | ![Recipe Details](./assets/screenshots/recipe_details.jpg) |
-| **Drawer** | Side menu with navigation and logout button | ![Drawer](./assets/screenshots/drawer.jpg) |
+**Login**  
+Login screen with email/password and Google Sign-In button  
+![Login](./assets/screenshots/login.jpg)
 
----
+**Create Account**  
+Screen to create an account with password confirmation  
+![Create Account](./assets/screenshots/create_account.jpg)
+
+**Home / Dashboard**  
+Main screen showing meal summary and recipes  
+![Home](./assets/screenshots/home.jpg)
+
+**Recipe Details**  
+Details of a selected recipe  
+![Recipe Details](./assets/screenshots/recipe_details.jpg)
+
+**Drawer**  
+Side menu with navigation and logout button  
+![Drawer](./assets/screenshots/drawer.jpg)
 
 ## Technologies
 
