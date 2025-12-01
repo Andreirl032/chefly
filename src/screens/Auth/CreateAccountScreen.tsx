@@ -46,29 +46,36 @@ export default function CreateAccountScreen({ navigation }: Props) {
 
       {error ? <Text style={styles.error}>{error}</Text> : null}
 
-      <TextInput
-        style={styles.input}
-        placeholder="E-mail"
-        keyboardType="email-address"
-        value={email}
-        onChangeText={setEmail}
-      />
+      <Text style={styles.label}>E-mail</Text>
+<TextInput
+  style={styles.input}
+  placeholder="Digite seu e-mail"
+  placeholderTextColor="#aaa"
+  keyboardType="email-address"
+  autoCapitalize="none"
+  value={email}
+  onChangeText={setEmail}
+/>
 
-      <TextInput
-        style={styles.input}
-        placeholder="Password"
-        secureTextEntry
-        value={password}
-        onChangeText={setPassword}
-      />
+<Text style={styles.label}>Password</Text>
+<TextInput
+  style={styles.input}
+  placeholder="Digite sua senha"
+  placeholderTextColor="#aaa"
+  secureTextEntry
+  value={password}
+  onChangeText={setPassword}
+/>
 
-      <TextInput
-        style={styles.input}
-        placeholder="Confirm Password"
-        secureTextEntry
-        value={confirm}
-        onChangeText={setConfirm}
-      />
+<Text style={styles.label}>Confirm Password</Text>
+<TextInput
+  style={styles.input}
+  placeholder="Confirme sua senha"
+  placeholderTextColor="#aaa"
+  secureTextEntry
+  value={confirm}
+  onChangeText={setConfirm}
+/>
 
       <TouchableOpacity style={styles.button} onPress={handleCreate}>
         <Text style={styles.buttonText}>Continue</Text>
@@ -94,8 +101,15 @@ const styles = StyleSheet.create({
     borderColor: '#ccc',
     borderRadius: 8,
     padding: 12,
-    marginBottom: 16,
+    marginBottom: 3,
+    color: '#000',
   },
+  label: {
+  fontWeight: '600',
+  color: '#000',
+  marginBottom: 6,
+  marginTop: 8,
+},
   button: {
     backgroundColor: '#ff8c42',
     padding: 14,

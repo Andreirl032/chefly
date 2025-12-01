@@ -38,22 +38,26 @@ export default function LoginScreen() {
     <SafeAreaView style={styles.container} edges={['top']}>
       <Text style={styles.title}>Welcome Back</Text>
 
-      <TextInput
-        style={styles.input}
-        placeholder="Email"
-        autoCapitalize="none"
-        keyboardType="email-address"
-        value={email}
-        onChangeText={setEmail}
-      />
+      <Text style={styles.label}>E-mail</Text>
+<TextInput
+  style={styles.input}
+  placeholder="Digite seu e-mail"
+  placeholderTextColor="#aaa"
+  autoCapitalize="none"
+  keyboardType="email-address"
+  value={email}
+  onChangeText={setEmail}
+/>
 
-      <TextInput
-        style={styles.input}
-        placeholder="Password"
-        secureTextEntry
-        value={password}
-        onChangeText={setPassword}
-      />
+<Text style={styles.label}>Senha</Text>
+<TextInput
+  style={styles.input}
+  placeholder="Digite sua senha"
+  placeholderTextColor="#aaa"
+  secureTextEntry
+  value={password}
+  onChangeText={setPassword}
+/>
 
       <TouchableOpacity style={styles.button} onPress={login}>
         <Text style={styles.buttonText}>Sign In</Text>
@@ -87,13 +91,20 @@ const styles = StyleSheet.create({
     marginBottom: 32,
     textAlign: 'center',
   },
-  input: {
-    borderWidth: 1,
-    borderColor: '#ddd',
-    padding: 12,
-    borderRadius: 8,
-    marginBottom: 14,
-  },
+  label: {
+  fontWeight: '600',
+  color: '#000',
+  marginBottom: 6,
+  marginTop: 3,
+},
+input: {
+  borderWidth: 1,
+  borderColor: '#ddd',
+  padding: 12,
+  borderRadius: 8,
+  marginBottom: 10,
+  color: '#000',
+},
   button: {
     backgroundColor: '#FF7F50',
     padding: 14,
