@@ -8,9 +8,9 @@ import {
 } from 'react-native';
 import auth from '@react-native-firebase/auth';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../types/Navigation';
+import { AuthStackParamList } from '../../types/Navigation';
 
-type Props = NativeStackScreenProps<RootStackParamList, 'CreateAccount'>;
+type Props = NativeStackScreenProps<AuthStackParamList, 'CreateAccount'>;
 
 export default function CreateAccountScreen({ navigation }: Props) {
   const [email, setEmail] = useState('');
