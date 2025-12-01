@@ -50,13 +50,13 @@ Chefly is a mobile application that allows users to track their meals, view reci
 
 First, run **Metro**, the JavaScript build tool for React Native:
 
-\`\`\`bash
+```bash
 # Using npm
 npm start
 
 # OR using Yarn
 yarn start
-\`\`\`
+```
 
 ### Step 2: Run the App
 
@@ -64,23 +64,23 @@ Open a new terminal window from the root of your project:
 
 #### Android
 
-\`\`\`bash
+```bash
 # Using npm
 npm run android
 
 # OR using Yarn
 yarn android
-\`\`\`
+```
 
 #### iOS (future support)
 
-\`\`\`bash
+```bash
 # Using npm
 npm run ios
 
 # OR using Yarn
 yarn ios
-\`\`\`
+```
 
 > Note: iOS support requires Xcode and CocoaPods. Currently, testing is only on Android.
 
@@ -94,15 +94,15 @@ yarn ios
 
 To generate a release APK:
 
-\`\`\`bash
+```bash
 cd android
 gradlew assembleRelease
-\`\`\`
+```
 
 The APK will be located at:
 
-\`\`\`
+```
 android/app/build/outputs/apk/release/app-release.apk
-\`\`\`
+```
 
 > Note: This APK is not signed. To publish on Google Play, you need to create a keystore and configure it in \`build.gradle\`.
