@@ -24,7 +24,7 @@ The main focus was to create a smooth and well-structured mobile experience. It 
 - TheMealDB (API)
 
 ---
-
+<!--
 ## ⚙️ Como rodar | Getting Started
 
 ```bash
@@ -32,3 +32,4 @@ git clone https://github.com/Andreirl032/chefly
 cd chefly
 npm install
 npx react-native run-android
+-->
